@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(35, 33, 35);
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60vh;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+}
+
+.wrapper .box {
+  position: relative;
+  background: none no-repeat center/cover;
+  min-height: 100%;
+  border-radius: 5rem;
+  overflow: hidden;
+  flex-grow: 1;
+  transition: 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wrapper .box .bottom {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.wrapper .box .bottom i {
+  color: #414141;
+  font-size: 1.6rem;
+  transition: .4s;
+}
+
+.wrapper .box.accordion-open {
+  flex-grow: 7;
+}
+
+.wrapper .box.accordion-open i{
+  transform: rotate(-180deg);
+}
+
+
+.wrapper .box1 {
+  background: hsla(142, 100%, 50%, 1);
+}
+
+.wrapper .box2 {
+  background: hsla(268, 100%, 83%, 1);
+}
+
+.wrapper .box3 {
+  background: hsla(353, 100%, 89%, 1);
+}
+
+.wrapper .box4 {
+  background: hsla(51, 100%, 71%, 1);
+}
+
+.wrapper .box5 {
+  background: hsla(79, 100%, 75%, 1);
+}
+
+.wrapper .box6 {
+  background: hsla(249, 100%, 70%, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    height: 80vh;
+    width: 80%;
+  }
+
+  .wrapper .box {
+    width: 100% !important;
+    min-height: 10px !important;
+    border-radius: 2rem;
+    flex-grow: 1;
+  }
+
+  .wrapper .box:not(:first-child, :last-child) {
+    margin: 0.32rem 0rem;
+  }
+
+  .wrapper .box .bottom i {
+    transform: rotate(90deg);
+  }
+}
