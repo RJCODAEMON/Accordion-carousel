@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -33,26 +35,35 @@ body {
   transition: 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.box .title__text{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  transform: translate(-0%,-50%);
+  transform: rotate(-90deg);
+  font-family: 'Monoton', cursive;
+  font-size:4rem;
+  color: #fff;
+  transition: all .4s ease;
+}
+
 .wrapper .box .bottom {
   position: absolute;
   bottom: 5%;
   left: 50%;
+  height: 100%;
+  width: 100%;
   transform: translateX(-50%);
   cursor: pointer;
-}
-
-.wrapper .box .bottom i {
-  color: #414141;
-  font-size: 1.6rem;
-  transition: .4s;
 }
 
 .wrapper .box.accordion-open {
   flex-grow: 7;
 }
 
-.wrapper .box.accordion-open i{
-  transform: rotate(-180deg);
+.wrapper .box.accordion-open .title__text{
+  left: 25%;
+  transform: rotate(0deg);
 }
 
 
