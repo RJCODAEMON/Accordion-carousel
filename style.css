@@ -91,8 +91,4 @@ body {
   .wrapper .box:not(:first-child, :last-child) {
     margin: 0.32rem 0rem;
   }
-
-  .wrapper .box .bottom i {
-    transform: rotate(90deg);
-  }
 }
