@@ -1,5 +1,7 @@
+/*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
+/*=============== BASE ===============*/
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +15,7 @@ body {
   background: rgb(35, 33, 35);
 }
 
+/*=============== WRAPPER ===============*/
 .wrapper {
   position: absolute;
   top: 50%;
@@ -48,10 +51,12 @@ body {
   cursor: pointer;
 }
 
+/*=============== TRIGGER ===============*/
 .wrapper .box.accordion-open {
   flex-grow: 7;
 }
 
+/* backgroud img setup */
 .wrapper .box1 {
   background-image: url("./img/1.jpg");
 }
@@ -72,6 +77,8 @@ body {
   background-image: url("./img/5.jpg");
 }
 
+
+/*=============== MEDIA QUERIES (tablet) ===============*/
 @media screen and (max-width: 768px) {
   .wrapper {
     flex-direction: column;
@@ -90,5 +97,28 @@ body {
 
   .wrapper .box:not(:first-child, :last-child) {
     margin: 0.32rem 0rem;
+  }
+}
+
+
+/*=============== MEDIA QUERIES (mobile) ===============*/
+@media screen and (max-width: 425px) {
+  .wrapper {
+    row-gap: .1rem;
+  }
+
+  .wrapper .box.accordion-open {
+    flex-grow: 4;
+  }
+}
+
+/*=============== MEDIA QUERIES (mobile - small) ===============*/
+@media screen and (max-width: 320px) {
+  .wrapper {
+    row-gap: .05rem;
+  }
+
+  .wrapper .box.accordion-open {
+    flex-grow: 3;
   }
 }
